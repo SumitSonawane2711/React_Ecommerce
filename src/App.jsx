@@ -2,12 +2,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import Navbar from './features/navbar/Navbar'
-import ProductList from './features/product-list/ProductList'
+import ProductList from './features/product-list/components/ProductList'
 import LoginPage from './pages/LoginPage'
 import SignupPage from './pages/SignupPage'
 import Home from './pages/Home'
 import CartPage from './pages/CartPage'
 import CheckOut from './pages/CheckOut'
+import ProductDetailPage from './pages/ProductDetailPage'
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
       path: "/checkout",
       element: <CheckOut></CheckOut>
     },
+    {
+      path: '/product-detail',
+      element: <ProductDetailPage></ProductDetailPage>
+    }
   ])
 
   return (
